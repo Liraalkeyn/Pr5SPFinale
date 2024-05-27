@@ -1,0 +1,945 @@
+{
+  "x-generator": "NSwag v14.0.7.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "My Title",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/Country": {
+      "get": {
+        "tags": [
+          "Country"
+        ],
+        "operationId": "Country_GetCountries",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Country"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Country"
+        ],
+        "operationId": "Country_PostCountry",
+        "requestBody": {
+          "x-name": "country",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Country"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Country/{id}": {
+      "get": {
+        "tags": [
+          "Country"
+        ],
+        "operationId": "Country_GetCountry",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Country"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Country"
+        ],
+        "summary": "ааа",
+        "operationId": "Country_PutCountry",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "country",
+          "description": "ааа",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Country"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Country"
+        ],
+        "operationId": "Country_DeleteCountry",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Exhibit": {
+      "get": {
+        "tags": [
+          "Exhibit"
+        ],
+        "operationId": "Exhibit_GetExhibits",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Exhibit"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Exhibit"
+        ],
+        "operationId": "Exhibit_PostExhibit",
+        "requestBody": {
+          "x-name": "exhibit",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Exhibit"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Exhibit"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Exhibit/{id}": {
+      "get": {
+        "tags": [
+          "Exhibit"
+        ],
+        "operationId": "Exhibit_GetExhibit",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Exhibit"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Exhibit"
+        ],
+        "operationId": "Exhibit_PutExhibit",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "exhibit",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Exhibit"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Exhibit"
+        ],
+        "operationId": "Exhibit_DeleteExhibit",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Pavilion": {
+      "get": {
+        "tags": [
+          "Pavilion"
+        ],
+        "operationId": "Pavilion_GetPavilions",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Pavilion"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Pavilion"
+        ],
+        "operationId": "Pavilion_PostPavilion",
+        "requestBody": {
+          "x-name": "pavilion",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pavilion"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pavilion"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Pavilion/{id}": {
+      "get": {
+        "tags": [
+          "Pavilion"
+        ],
+        "operationId": "Pavilion_GetPavilion",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pavilion"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Pavilion"
+        ],
+        "operationId": "Pavilion_PutPavilion",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "pavilion",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pavilion"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Pavilion"
+        ],
+        "operationId": "Pavilion_DeletePavilion",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ResponsibleEmployee": {
+      "get": {
+        "tags": [
+          "ResponsibleEmployee"
+        ],
+        "operationId": "ResponsibleEmployee_GetResponsibleEmployees",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ResponsibleEmployee"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ResponsibleEmployee"
+        ],
+        "operationId": "ResponsibleEmployee_PostResponsibleEmployee",
+        "requestBody": {
+          "x-name": "responsibleEmployee",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResponsibleEmployee"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponsibleEmployee"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ResponsibleEmployee/{id}": {
+      "get": {
+        "tags": [
+          "ResponsibleEmployee"
+        ],
+        "operationId": "ResponsibleEmployee_GetResponsibleEmployee",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponsibleEmployee"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ResponsibleEmployee"
+        ],
+        "operationId": "ResponsibleEmployee_PutResponsibleEmployee",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "responsibleEmployee",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResponsibleEmployee"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ResponsibleEmployee"
+        ],
+        "operationId": "ResponsibleEmployee_DeleteResponsibleEmployee",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TypeOfExhibit": {
+      "get": {
+        "tags": [
+          "TypeOfExhibit"
+        ],
+        "operationId": "TypeOfExhibit_GetTypeOfExhibits",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TypeOfExhibit"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "TypeOfExhibit"
+        ],
+        "operationId": "TypeOfExhibit_PostTypeOfExhibit",
+        "requestBody": {
+          "x-name": "typeOfExhibit",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeOfExhibit"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TypeOfExhibit"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TypeOfExhibit/{id}": {
+      "get": {
+        "tags": [
+          "TypeOfExhibit"
+        ],
+        "operationId": "TypeOfExhibit_GetTypeOfExhibit",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TypeOfExhibit"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "TypeOfExhibit"
+        ],
+        "operationId": "TypeOfExhibit_PutTypeOfExhibit",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "typeOfExhibit",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeOfExhibit"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "TypeOfExhibit"
+        ],
+        "operationId": "TypeOfExhibit_DeleteTypeOfExhibit",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Country": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "countryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nameOfCountry": {
+            "type": "string"
+          },
+          "exhibits": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Exhibit"
+            }
+          }
+        }
+      },
+      "Exhibit": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "exhibitId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nameOfExhibit": {
+            "type": "string"
+          },
+          "typeOfExhibit": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "countryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dateOfArrival": {
+            "type": "string",
+            "format": "date"
+          },
+          "pavilionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "discoveryDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "country": {
+            "$ref": "#/components/schemas/Country"
+          },
+          "pavilion": {
+            "$ref": "#/components/schemas/Pavilion"
+          },
+          "typeOfExhibitNavigation": {
+            "$ref": "#/components/schemas/TypeOfExhibit"
+          }
+        }
+      },
+      "Pavilion": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "pavilionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nameOfPavilion": {
+            "type": "string"
+          },
+          "responsibleEmployee": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "exhibits": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Exhibit"
+            }
+          },
+          "responsibleEmployeeNavigation": {
+            "$ref": "#/components/schemas/ResponsibleEmployee"
+          }
+        }
+      },
+      "ResponsibleEmployee": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "responsibleEmployeeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "patronymic": {
+            "type": "string"
+          },
+          "telephoneNumber": {
+            "type": "string"
+          },
+          "pavilions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Pavilion"
+            }
+          }
+        }
+      },
+      "TypeOfExhibit": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "typeOfExhibitId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nameOfType": {
+            "type": "string"
+          },
+          "exhibits": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Exhibit"
+            }
+          }
+        }
+      }
+    }
+  }
+}
