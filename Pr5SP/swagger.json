@@ -6,6 +6,137 @@
     "version": "1.0.0"
   },
   "paths": {
+    "/api/AuditView": {
+      "get": {
+        "tags": [
+          "AuditView"
+        ],
+        "operationId": "AuditView_GetCountries",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AuditView"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "AuditView"
+        ],
+        "operationId": "AuditView_PostAuditView",
+        "requestBody": {
+          "x-name": "AuditView",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuditView"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuditView"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/AuditView/{id}": {
+      "put": {
+        "tags": [
+          "AuditView"
+        ],
+        "summary": "ааа",
+        "operationId": "AuditView_PutAuditView",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "AuditView",
+          "description": "ааа",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuditView"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "AuditView"
+        ],
+        "operationId": "AuditView_DeleteAuditView",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "guid"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Country": {
       "get": {
         "tags": [
@@ -806,6 +937,32 @@
   },
   "components": {
     "schemas": {
+      "AuditView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "responsibleEmployeeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "patronymic": {
+            "type": "string"
+          },
+          "telephoneNumber": {
+            "type": "string"
+          },
+          "genuuid": {
+            "type": "string",
+            "format": "guid"
+          }
+        }
+      },
       "Country": {
         "type": "object",
         "additionalProperties": false,
